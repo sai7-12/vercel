@@ -1,2 +1,7 @@
 Flask
 openai
+pandas
+chromadb
+sentence-transformers
+Flask-Cors==5.0.0
+openpyxl==3.1.5
