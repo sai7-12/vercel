@@ -60,7 +60,6 @@ for index, row in df.iterrows():
 
 print("Embeddings have been successfully stored in ChromaDB.")
 
-os.environ['OPENAI_API_KEY'] = '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'
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
