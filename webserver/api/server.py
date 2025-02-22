@@ -128,7 +128,13 @@ def chat():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
+@app.route('/test-env')
+def test_env():
+    api_key = os.getenv('OPENAI_API_KEY')
+    if api_key:
+        return f"API Key is accessible: {api_key[:5]}... (truncated for security)"
+    else:
+        return "API Key is not accessible", 500
 # Run the Flask app on localhost or any specified host/port
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
